@@ -1,0 +1,11 @@
+<?php
+include 'wp-admin/includes/file.php';
+$dir = dirname(get_home_path()).'/cmpe272/contact.txt';
+$myfile = fopen($dir, "r") or die("Unable to open file!");
+if ($myfile) {
+    while (($line = fgets($myfile)) !== false) {
+           echo $line . '</br>';
+    }
+    fclose($myfile);
+}
+?>
